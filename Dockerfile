@@ -1,4 +1,4 @@
-# Multi-stage Dockerfile for IPsec Sentinel
+# Multi-stage Dockerfile for IPsec Sentinel (Works on Hugging Face Spaces, Render, Railway, Docker)
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -18,7 +18,7 @@ COPY backend/ /app/backend/
 
 WORKDIR /app/backend
 
-ENV PORT=8000
-EXPOSE 8000
+ENV PORT=7860
+EXPOSE 7860
 
 CMD ["python", "main.py"]
